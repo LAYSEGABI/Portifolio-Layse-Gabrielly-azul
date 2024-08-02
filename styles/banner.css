@@ -1,0 +1,133 @@
+.banner {
+    display: flex;
+    align-items: center;
+    padding: 2em 10%;
+    height: 100vh;
+    justify-content: space-around;
+    justify-content: flex-start;
+    background: url('../img/2825704.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    box-shadow: 0px -12px 12px 0px #040414 inset;
+}
+
+.banner-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--cor-texto);
+
+}
+
+.banner-redes {
+    display: flex;
+    gap: 30px;
+    margin-top: 3em;
+}
+
+.banner-descricao {
+    color: var(--cinza-padrao);
+    font-weight: 600;
+}
+
+
+.banner-redes a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.486);
+    color: var(--cor-texto);
+    transition: 0.9s;
+    border: 1px solid var(--cor-destaque);
+    animation: float 3s infinite;
+    animation: neon 1s alternate infinite ease-in-out;
+}
+
+.banner-redes a:hover {
+    background-color: var(--cor-destaque);
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Animação de flutuar */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.banner-texto h1 {
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+    font-size: 3.2em;
+    animation: blinkCursor 1s steps(40) infinite normal,
+        typing 2.5s steps(40) 1s normal both;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*---------animação da tag h1 - Layse Gabrielly -----------*/
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 8em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/*--------- Animações efeito neon----------------------------*/
+
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 9px var(--cor-destaque);
+    }
+
+    100% {
+        box-shadow: 0 0 0px var(--cor-destaque);
+
+    }
+}
+
+
+
+@media (max-width: 500px) {
+
+    .banner{
+        height: 100vh;
+    }
+    
+
+ 
+    .banner-texto h1 {
+    font-size: 2em;
+    }
+
+    .banner-redes a{
+        width: 50%;
+    }
+
+}

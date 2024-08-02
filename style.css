@@ -1,0 +1,74 @@
+/* Fonte texto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Links arquivos css */
+@import url('styles/header.css');
+@import url('styles/banner.css');
+@import url('styles/projetos.css');
+@import url('styles/sobre-mim.css');
+@import url('styles/conhecimentos.css');
+@import url('styles/contato.css');
+@import url('styles/footer.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-destaque: #1c59dd;
+    --cor-texto: rgb(235, 225, 225);
+    --preto-padrao: #040414;
+    --cinza-padrao: rgb(196, 196, 196);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--preto-padrao);
+}
+
+
+/* Scrollbar personalizada */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--preto-padrao);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+}
+
+
+/* Animaçoes de entrada e saida de conteudo */
+
+[data-anima] {
+    opacity: 0;
+    transition: .8s;
+}
+
+[data-anima="esquerda"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anima="direita"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anima="centro"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
